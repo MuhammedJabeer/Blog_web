@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/stylesheets/dashboard.css">
+</head>
+<body>
+
+   
+    <div class="sidebar">
+        <h2>Admin Panel</h2>
+         <a href="/home" class="logout-btn">Home</a>
+        <a href="/logout" class="logout-btn"> Logout</a>
+         <a  class="logout-btn">Total User:{{usercount}}</a>
+        <a  class="logout-btn"> Total Blog:{{blogcount}}</a>
+
+    </div>
+
+   
+    <div class="dashboard">
+        <h1>Welcome, Admin</h1>
+        <p>Manage users, blogs, and reports from here.</p>
+
+        <div class="admin-section">
+            <h2> Manage Users</h2>
+            <table>
+                <tr>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+                {{#each users}}
+                <tr>
+                    <td>{{username}}</td>
+                    <td>{{email}}</td>
+                    <td>
+    <form action="/block/{{this._id}}" method="POST" style="display:inline;">
+        <button type="submit" class="delete-btn">
+            {{#if this.blocked}} Unblock {{else}} Block {{/if}}
+        </button>
+    </form>
+</td>
+
+                </tr>
+                {{/each}}
+            </table>
+        </div>
+
+      
+        <div class="admin-section">
+            <h2>Manage Blogs</h2>
+            <table>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Actions</th>
+                </tr>
+                {{#each blog}}
+                <tr>
+                    <td>{{this.title}}</td>
+                    <td>{{this.user.username}}</td>
+                    <td><a href="/edit/{{this._id}}" class="edit-btn">Edit</a><form action="/delete/{{_id}}" method="POST" style="display:inline;">
+                            <button type="submit" class=" delete-btn">Delete</button>
+                        </form></td>
+                </tr>
+                {{/each}}
+            </table>
+        </div>
+
+      
+    </div>
+
+</body>
+</html>

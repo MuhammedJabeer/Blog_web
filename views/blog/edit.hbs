@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Page</title>
+    <link rel="stylesheet" href="/stylesheets/edit.css">
+</head>
+<body>
+    
+
+<form action="/edit/{{blog._id}}" method="POST"  enctype="multipart/form-data">
+    <h1>Edit Blog</h1>
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" value="{{blog.title}}" required>
+
+    <label for="content">Content:</label>
+    <textarea id="content" name="content" required>{{blog.content}}</textarea>
+
+    {{#if blog.image}}
+        <label>Current Image:</label>
+        <img src="/images/{{blog.image}}" alt="Blog Image" class="blog-image">
+    {{/if}}
+
+       <label for="newImage">Upload New Image:</label>
+    <input type="file" id="newImage" name="image">
+
+    <button type="submit">Update Blog</button>
+ {{#if (eq user.role "admin")}}
+    <a href="/dashboard">Back to Dashboard</a>
+{{else}}
+    <a href="/list">Back to Blogs</a>
+{{/if}}
+
+
+</form>
+</body>
+</html>

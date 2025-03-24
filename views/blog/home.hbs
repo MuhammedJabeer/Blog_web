@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Home</title>
+    <link rel="stylesheet" href="/stylesheets/home.css">
+</head>
+<body>
+   {{> nav}}
+    <div class="container">
+        
+        <h1>Welcome to My Blog</h1>
+        <p>Explore, create, and manage your blogs with ease.</p>
+        <div class="nav-buttons">
+            <a href="/list" class="btn"> View All Blogs</a>
+            <a href="/create" class="btn"> Create Blog</a>
+            <a href="/myblog" class="btn"> View My Blog</a>
+             <a href="/logout" class="btn">logout</a>
+              <a href="/admin" class="btn">Dashboard</a>
+        </div>
+    </div>
+    {{> footer}}
+</body>
+</html>    

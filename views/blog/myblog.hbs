@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog List</title>
+    <link rel="stylesheet" href="/stylesheets/list.css">
+</head>
+<body>
+     {{> nav}}
+    <div class="container">
+        <h1 class="title">My Blogs</h1>
+
+        {{#each blog}}
+            <div class="blog-card">
+                  {{#if image}}
+              <img src="/images/{{image}}" alt="Blog Image" class="blog-image">
+            {{/if}}
+                <div class="blog-content">
+                    <h2>Title:{{title}}</h2>
+                    <p>Content:{{content}}</p>
+                    
+                      
+
+                    <div class="blog-actions">
+                        <a href="/edit/{{_id}}" class="btn edit-btn">Edit</a>
+                         <form action="/delete/{{_id}}" method="POST" style="display:inline;">
+                            <button type="submit" class="btn delete-btn">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+
+        <a href="/create" class="btn add-btn">Create New Blog</a>
+         <a href="/home" class="btn add-btn">Back To Home</a>
+    </div>
+
+    {{> footer}}
+</body>
+</html>

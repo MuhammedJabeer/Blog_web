@@ -1,0 +1,95 @@
+/* Background - Smooth Gradient */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: linear-gradient(149.96deg, #0F0441 12.51%, #ff4208 89.53%); */
+
+    background: url(https://i.postimg.cc/0jv27Qvw/20008380-645221846.jpg),#000;
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+}
+
+/* Signup Container - Glassmorphism */
+.signup-container {
+    background: rgba(255, 255, 255, 0.2); /* Transparent White */
+    backdrop-filter: blur(10px); /* Blur Effect */
+    padding: 35px;
+    border-radius: 10px;
+    width: 350px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading */
+.signup-container h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* Error Message */
+.error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Labels */
+.signup-container label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    color: white;
+    margin: 10px 0 5px;
+}
+
+/* Input Fields */
+.signup-container input {
+    width: 100%;
+    height: 35px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+/* Signup Button */
+.signup-container button {
+    margin: 5px;
+    background: #5D3754;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+/* Button Hover */
+.signup-container button:hover {
+    background: #A78AB5;
+}
+
+/* Login Link */
+.login-link {
+    margin-top: 15px;
+    font-size: 14px;
+    color: white;
+}
+
+.login-link a {
+    color: rgb(21, 56, 253);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}

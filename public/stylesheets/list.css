@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(-45deg, #ff9966, #ff5e62, #ff9966, #ff5e62);
+    background-size: 400% 400%;
+    animation: gradientAnimation 6s infinite linear;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Background Animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: 500px;
+    overflow-y: auto;
+}
+
+.title {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.blog-card {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.blog-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.blog-content h2 {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.blog-content p {
+    max-height: 150px; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5; 
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
+
+.blog-actions {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn {
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.view-btn {
+    background: #02f112;
+    color: white;
+}
+
+.edit-btn {
+    background: #3498db;
+    color: white;
+}
+
+.delete-btn {
+    background: #e74c3c;
+    color: white;
+}
+
+.add-btn {
+    background: #ff5e62;
+    color: white;
+    display: inline-block;
+    margin-top: 15px;
+}

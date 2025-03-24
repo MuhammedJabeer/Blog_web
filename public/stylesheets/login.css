@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background:  linear-gradient(135deg,  #ff9a9e 0%, #fad0c4 100%); */
+    background: url(https://i.postimg.cc/0jv27Qvw/20008380-645221846.jpg),#000;
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+   
+}
+/* body::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  
+} */
+
+
+
+
+.container {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* .login-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+} */
+.login-container {
+    background: rgba(255, 255, 255, 0.2); /* Transparent White */
+    backdrop-filter: blur(10px); /* Blur Effect */
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+input {
+    width: 100%;
+     height: 35px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+}
+
+button {
+    background:#5D3754;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+ button:hover {
+    background: #A78AB5;
+}
+
+.error {
+    color: red;
+}
